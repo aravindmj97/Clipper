@@ -123,7 +123,7 @@ public class ClipboardMonitorService extends Service {
             }
 
             if (isExternalStorageWritable()) {
-                reference.push().child("text").setValue(mTextToWrite).addOnCompleteListener(new OnCompleteListener<Void>() {
+                reference.push().child("text").setValue(mTextToWrite.toString()).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         try {
